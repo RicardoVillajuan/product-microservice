@@ -10,13 +10,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Document(collection = "typeproduct")
-public class TypeProduct {
+@Document(collection = "product")
+public class Product {
 	
 	@Id
 	private String id;
+	private String typeproduct;
 	private String nameproduct;
-	
 	
 	
 	 
