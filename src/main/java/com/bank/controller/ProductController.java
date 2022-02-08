@@ -29,6 +29,12 @@ public class ProductController {
 		return productService.findAll();
 	}
 	
+	@GetMapping("/findbyid/{id}")
+	public Mono<Product> findById(@PathVariable String id){
+		
+		return productService.findProductById(id);
+	}
+	
 	@PostMapping("/update")
 	public Mono<Product> saveProduct(@RequestBody Product product){
 		
@@ -46,4 +52,6 @@ public class ProductController {
 		
 		return productService.save(product);
 	}
+	
+	
 }
